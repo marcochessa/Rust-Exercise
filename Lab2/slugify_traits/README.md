@@ -1,38 +1,38 @@
 # Slugify - Traits
 
-Questo è un modulo Rust che fornisce funzionalità per la creazione di URL friendly stringhe (slug) da testo normale, con l'aggiunta di tratti per verificare se una stringa è già uno slug e per convertire una stringa in uno slug.
+This is a Rust module that provides functionality for creating URL-friendly strings (slugs) from normal text, with the addition of traits to check if a string is already a slug and to convert a string into a slug.
 
-## Utilizzo
+## Usage
 
-Aggiungi `slugify` al tuo file `Cargo.toml`:
+Add `slugify` to your `Cargo.toml` file:
 
 ```toml
 [dependencies]
 slugify = "0.1.0"
 ```
 
-Quindi importa e utilizza il modulo `slugify` nel tuo codice:
+Then import and use the `slugify` module in your code:
 
 ```rust
 use slugify::MySlug;
 
-// Verifica se una stringa è uno slug
+// Check if a string is a slug
 let s1 = String::from("hello-slice");
 let s2 = "hello_string";
 println!("{}", s1.is_slug()); // true
 println!("{}", s2.is_slug()); // false
 
-// Converti una stringa in uno slug
+// Convert a string to a slug
 let s3: String = s1.to_slug();
 let s4: String = s2.to_slug();
-println!("s3: {}, s4: {}", s3, s4); // stampa: s3: hello-slice, s4: hello-string
+println!("s3: {}, s4: {}", s3, s4); // Output: s3: hello-slice, s4: hello-string
 ```
 
 ## API
 
-- `is_slug() -> bool`: Verifica se la stringa è uno slug.
-- `to_slug() -> String`: Converte la stringa in uno slug.
+- `is_slug() -> bool`: Checks if the string is a slug.
+- `to_slug() -> String`: Converts the string to a slug.
 
-## Esempi
+## Examples
 
-Gli esempi di utilizzo del modulo sono disponibili nella documentazione del codice e nei test dell'unità.
+Usage examples of the module are available in the code documentation and unit tests.
