@@ -1,0 +1,9 @@
+[package]
+name = "circular_buffer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+complex_number = { path = "/Users/marcochessa/PoliTO/PDS/rust/Lab2/complex_number" }
