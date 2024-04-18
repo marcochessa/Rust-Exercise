@@ -6,4 +6,4 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-complex_number = { path = "/Users/marcochessa/PoliTO/PDS/rust/Lab2/complex_number" }
+complex_number = { path = "/Users/marcochessa/PoliTO/PDS/rust/rust_git/Lab2/complex_number" }
