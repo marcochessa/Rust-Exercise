@@ -1,9 +1,0 @@
-[package]
-name = "sluglify"
-version = "0.1.0"
-edition = "2021"
-
-# See more keys and their definitions at c
-
-[dependencies]
-clap = {version = "4.1.13", features = ["derive"]}
