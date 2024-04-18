@@ -1,44 +1,44 @@
 # ComplexNumber
 
-Questo è un modulo in Rust che fornisce un'implementazione di numeri complessi, con funzionalità come costruzione, accesso ai componenti reali e immaginari, calcolo del modulo, confronto, e operazioni aritmetiche.
+This is a Rust module that provides an implementation of complex numbers, with features such as construction, access to real and imaginary components, modulus calculation, comparison, and arithmetic operations.
 
-## Utilizzo
+## Usage
 
-Aggiungi `solution` al tuo file `Cargo.toml`:
+Add `solution` to your `Cargo.toml` file:
 
 ```toml
 [dependencies]
 solution = "0.1.0"
 ```
 
-Quindi importa e utilizza il modulo `solution` nel tuo codice:
+Then import and use the `solution` module in your code:
 
 ```rust
 use solution::ComplexNumber;
 
-// Crea un nuovo numero complesso
+// Create a new complex number
 let num = ComplexNumber::new(3.0, 4.0);
 
-// Ottieni il valore reale e immaginario
+// Get the real and imaginary parts
 let real_part = num.real();
 let imag_part = num.imag();
-println!("Parte reale: {}, Parte immaginaria: {}", real_part, imag_part);
+println!("Real part: {}, Imaginary part: {}", real_part, imag_part);
 
-// Calcola il modulo del numero complesso
+// Calculate the modulus of the complex number
 let modulus = num.modulus();
-println!("Modulo: {}", modulus);
+println!("Modulus: {}", modulus);
 ```
 
 ## API
 
-- `new(real: f64, imag: f64) -> Self`: Crea un nuovo numero complesso con la parte reale e la parte immaginaria specificate.
-- `from_real(real: f64) -> Self`: Crea un nuovo numero complesso con solo la parte reale specificata.
-- `real() -> f64`: Restituisce la parte reale del numero complesso.
-- `imag() -> f64`: Restituisce la parte immaginaria del numero complesso.
-- `to_tuple() -> (f64, f64)`: Restituisce una tupla contenente la parte reale e la parte immaginaria del numero complesso.
-- `modulus() -> f64`: Calcola e restituisce il modulo del numero complesso.
-- Operatori aritmetici supportati: `+`, `+=` per l'addizione di numeri complessi e scalari.
+- `new(real: f64, imag: f64) -> Self`: Creates a new complex number with the specified real and imaginary parts.
+- `from_real(real: f64) -> Self`: Creates a new complex number with only the specified real part.
+- `real() -> f64`: Returns the real part of the complex number.
+- `imag() -> f64`: Returns the imaginary part of the complex number.
+- `to_tuple() -> (f64, f64)`: Returns a tuple containing the real and imaginary parts of the complex number.
+- `modulus() -> f64`: Calculates and returns the modulus of the complex number.
+- Supported arithmetic operators: `+`, `+=` for addition of complex numbers and scalars.
 
-## Esempi
+## Examples
 
-Gli esempi di utilizzo dei numeri complessi sono disponibili nella documentazione del codice e nei test dell'unità.
+Usage examples of complex numbers are available in the code documentation and unit tests.

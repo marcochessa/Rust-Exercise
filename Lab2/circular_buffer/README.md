@@ -1,44 +1,44 @@
 # CircularBuffer
 
-Questo è un semplice buffer circolare implementato in Rust, che consente l'inserimento, la lettura e l'accesso agli elementi in modo efficiente.
+This is a simple circular buffer implemented in Rust, allowing efficient insertion, reading, and access to elements.
 
-## Utilizzo
+## Usage
 
-Aggiungi `circular_buffer` al tuo file `Cargo.toml`:
+Add `circular_buffer` to your `Cargo.toml` file:
 
 ```toml
 [dependencies]
 circular_buffer = "0.1.0"
 ```
 
-Quindi importa e utilizza il `CircularBuffer` nel tuo codice:
+Then import and use `CircularBuffer` in your code:
 
 ```rust
 use circular_buffer::CircularBuffer;
 
-// Crea un nuovo buffer circolare con una capacità di 10 elementi
+// Create a new circular buffer with a capacity of 10 elements
 let mut buffer: CircularBuffer<i32> = CircularBuffer::new(10);
 
-// Scrivi un elemento nel buffer
+// Write an item to the buffer
 buffer.write(42).unwrap();
 
-// Leggi un elemento dal buffer
+// Read an item from the buffer
 let item = buffer.read();
 
-// Accedi agli elementi del buffer come se fossero un array
+// Access buffer elements as if they were an array
 let first_element = buffer[0];
 ```
 
 ## API
 
-- `new(capacity: usize) -> Self`: Crea un nuovo buffer circolare con la capacità specificata.
-- `write(item: T) -> Result<(), Error>`: Scrive un elemento nel buffer. Restituisce un errore se il buffer è pieno.
-- `read() -> Option<T>`: Legge e rimuove un elemento dal buffer. Restituisce `None` se il buffer è vuoto.
-- `clear()`: Svuota il buffer.
-- `size() -> usize`: Restituisce il numero di elementi presenti nel buffer.
-- `overwrite(item: T)`: Scrive un elemento nel buffer, sovrascrivendo il più vecchio se il buffer è pieno.
-- `make_contiguous()`: Rende il buffer contiguo, garantendo che gli elementi siano memorizzati in posizioni consecutive di memoria.
+- `new(capacity: usize) -> Self`: Creates a new circular buffer with the specified capacity.
+- `write(item: T) -> Result<(), Error>`: Writes an item to the buffer. Returns an error if the buffer is full.
+- `read() -> Option<T>`: Reads and removes an item from the buffer. Returns `None` if the buffer is empty.
+- `clear()`: Empties the buffer.
+- `size() -> usize`: Returns the number of elements present in the buffer.
+- `overwrite(item: T)`: Writes an item to the buffer, overwriting the oldest one if the buffer is full.
+- `make_contiguous()`: Makes the buffer contiguous, ensuring that elements are stored in consecutive memory positions.
 
-## Esempi
+## Examples
 
-Gli esempi di utilizzo del buffer circolare sono disponibili nella documentazione del codice e nei test dell'unità.
+Usage examples of the circular buffer are available in the code documentation and unit tests.
