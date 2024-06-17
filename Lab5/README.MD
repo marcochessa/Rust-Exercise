@@ -1,6 +1,6 @@
-## Lab 5
+# Lab 5
 
-### Exercise 1: Parallelizing Work
+## Exercise 1: Riddle - Parallelizing Work
 
 The puzzle requires finding the sequence of elementary operations (addition, subtraction, multiplication, and division) necessary to obtain 10, starting from 5 randomly chosen numbers between 0 and 9. The constraints are:
 - The five digits are between 0 and 9 and may repeat.
@@ -33,7 +33,7 @@ If there are no advantages, try with n = 6 or 7 digits instead of 5. Note: the o
 
 Suggestion: to generate permutations and combinations, use the itertools crate and see the permutations() and repeat_n(...).multi_cartesian_product() methods.
 
-### Exercise 2: Resource Sharing Between Threads
+## Exercise 2: Ring Buffer - Resource Sharing Between Threads
 
 Adapt the circular buffer exercise from previous exercises so that the producer (who writes values) and consumer (who reads values) run in two different threads.
 
@@ -47,7 +47,7 @@ The buffer must therefore be a `struct RingBuf` with two methods, `read() -> Opt
 
 Bonus: modify producer and consumer to write and read from the buffer without pauses (except when it is full or empty) and measure the throughput of the buffer with different sizes (10, 1000, 10000 values). Also measure the throughput by increasing the number of producers and consumers; how does it vary?
 
-### Exercise 3: Synchronization
+## Exercise 3: Barrier - Synchronization
 
 A barrier is a synchronization pattern that allows n threads to wait until all of them have reached a common point before proceeding.
 
